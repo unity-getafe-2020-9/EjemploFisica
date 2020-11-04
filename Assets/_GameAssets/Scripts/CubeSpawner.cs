@@ -22,12 +22,5 @@ public class CubeSpawner : MonoBehaviour
                 ForceMode.Impulse);
         }
     }
-    private void Update()
-    {
-        
-    }
-    private void FixedUpdate()
-    {
-        print(Time.deltaTime);
-    }
+
 }

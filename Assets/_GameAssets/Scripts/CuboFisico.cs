@@ -20,14 +20,16 @@ public class CuboFisico : MonoBehaviour
     }
     private void FixedUpdate()
     {
-
-        rigidbody.AddForce(Vector3.forward * acceleration, ForceMode.Force);//Aplicar un fuerza sobre coordenadas absolutas
+        //rigidbody.AddForce(Vector3.forward * acceleration, ForceMode.Force);//Aplicar un fuerza sobre coordenadas absolutas
         //rigidbody.AddRelativeForce(transform.forward * acceleration, ForceMode.Force);//Afecta masa
         //rigidbody.AddRelativeForce(transform.forward * acceleration, ForceMode.Acceleration);//No afecta masa
         //rigidbody.AddRelativeForce(transform.forward * acceleration, ForceMode.Impulse);//Afecta masa, solo aplicar en un frame
         //rigidbody.AddRelativeForce(transform.forward * acceleration, ForceMode.VelocityChange);//Independiente de la masa, incrementa la velocidad
         //rigidbody.AddTorque(Vector3.up * acceleration, ForceMode.Force);//Rotar sobre el eje y
         //rigidbody.AddForceAtPosition(Vector3.forward * acceleration, new Vector3(transform.position.x, transform.position.y - 0.4f, transform.position.z));
+        //rigidbody.velocity = Vector3.forward * Time.deltaTime * 1000;
+        //rigidbody.MovePosition(transform.position * (1 + Time.deltaTime * 0.01f));
+        
         textSpeed.text = rigidbody.velocity.magnitude.ToString();
     }
 }
